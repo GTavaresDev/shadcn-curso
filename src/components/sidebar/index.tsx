@@ -1,8 +1,8 @@
 "use client";
-import {Sheet, SheetContent, SheetTitle, SheetTrigger} from "@/components/ui/sheet";
+import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { PanelBottom } from 'lucide-react';
+import { Package, PanelBottom } from 'lucide-react';
 
 export default function Sidebar() {
     return (
@@ -17,13 +17,11 @@ export default function Sidebar() {
                         </Button>
                     </SheetTrigger>
 
-                    <SheetContent>
-                        <SheetTitle className="sr-only">Menu lateral</SheetTitle>
-                        <nav>
-                            <Link href="#">
-                                <span>Logo</span>
-                            </Link>
-                        </nav>
+                    <SheetContent className="sm:max-w-xs pt-6 pl-6">
+                        <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                            <Package className="h-5 w-5 transition-all" />
+                            <span className="sr-only">Logo</span>
+                        </Link>
                     </SheetContent>
                 </Sheet>
             </header>
